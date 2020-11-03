@@ -1,3 +1,36 @@
 body {
-    display:grid;
+    display:flex;
+    flex-wrap:wrap;
+    margin:5px;
+    font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif, serif;
+}
+
+header{
+    order: 0;
+    background-color:#9d847b;
+    flex:100%;
+    margin: 0px 0px 5px 0px;
+    text-align:center;
+}
+
+aside{
+    order:1;
+    background-color:#afb6b4;
+    margin:5px 5px 5px 0px;
+    flex:25%;
+}
+
+section{
+    order:2;
+    background-color:#cdcdcd;
+    margin:5px 0px 5px 5px;
+}
+
+footer{
+    order:3;
+    background-color:#e4cdd7;
+    display:flex;
+    flex:100%;
+    margin:5px 0px 5px 0px;
+    justify-content:center;
 }
