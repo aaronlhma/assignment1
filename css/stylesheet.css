@@ -1,3 +1,4 @@
+
 body {
     display:flex;
     flex-wrap:wrap;
@@ -17,7 +18,8 @@ aside{
     order:1;
     background-color:#c0c0c0;
     margin:5px 5px 5px 0px;
-    flex:25%;
+    flex:20%;
+    
 }
 
 form{
@@ -29,15 +31,17 @@ form{
     margin:5px 0px 5px 5px;
     padding:15px;
     flex: 70%;
+    min-height:15em;
 }
 
 footer{
     order:3;
     background-color:#debcb9;
     display:flex;
+    flex-wrap:wrap;
     flex:100%;
-    padding:10px;
     margin:5px 0px 5px 0px;
+    text-align:center;
     justify-content:center;
 }
 
@@ -83,4 +87,9 @@ button:nth-of-type(4){
     grid-column:7/8;
     grid-row:5;
     margin-left:5px;
+}
+
+footer h3{
+    flex:100%;
+    margin:5px;
 }
