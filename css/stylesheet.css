@@ -1,7 +1,9 @@
 
 body {
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.5fr;
+    grid-auto-rows: 1fr;
     margin:0px;
     font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif, serif;
     height:100vh;
@@ -14,13 +16,18 @@ header{
     margin:10px;
     text-align:center;
     max-height: 15%;
+    grid-column-start:1;
+    grid-column-end: 3;
+    grid-row-start:0;
 }
 
-aside{
+nav{
     order:1;
     background-color:#c0c0c0;
     margin:10px;
-    flex:20%;
+    grid-column-start:0;
+    grid-column-end:2;
+    grid-row-start:2;
     
 }
 
@@ -32,8 +39,10 @@ form{
     background-color:#ece8e8;
     margin:10px;
     padding:15px;
-    flex: 70%;
     min-height:50%;
+    grid-column-start:2;
+    grid-row-start:2;
+    grid-row-end:4;
 }
 
 footer{
@@ -41,11 +50,13 @@ footer{
     background-color:#debcb9;
     display:flex;
     flex-wrap:wrap;
-    flex:100%;
     margin:10px;
     text-align:center;
     justify-content:center;
     max-height:15%;
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start:4;
 }
 
 textarea{
