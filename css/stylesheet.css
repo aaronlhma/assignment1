@@ -91,6 +91,7 @@ textarea{
 }
 textarea.Light{
     color:slategrey;
+    background-color:whitesmoke
 }
 textarea.Dark{
     color:lightslategray;
@@ -146,6 +147,7 @@ button:nth-of-type(3).Dark{
     grid-row:3/4;
     margin-right:5px;
 }
+
 button:nth-of-type(4).Light{
     background-color:#d23d22;
     grid-column:4/5;
