@@ -1,3 +1,5 @@
+
+// Dark/Light toggle
 function dark_theme() {
     let x = document.getElementsByClassName("Light");
     while (x.length > 0){
@@ -26,6 +28,8 @@ function switch_theme(){
     }
 }
 
+
+// Show/Hide switch
 function hide_buttons(){
     let x = document.getElementsByClassName("Show");
     while(x.length>0){
@@ -42,16 +46,44 @@ function show_buttons(){
         x[0].classList.add('Show')
         x[0].classList.remove('Hide')
     }
+}
 
+// Save text into array
+function save_text(){
+    let x = document.getElementById('TextArea')
+    text = x.value;
+    lines = text.split('\n');
+    bodyText = ''
+    for (i=1;i<lines.length;i++){
+        bodyText += lines[i]+'\n';
+    }
+    notesArray.push({title:lines[0],body:bodyText});
+    create_note();
+}
+
+function create_note(){
+    idx = notesArray.length-1;
+    title = notesArray[idx].title;
+    body = notesArray[idx].body;
+    let note_to_add = document.createElement('li');
+    note_to_add.appendChild(document.createTextNode(title));
+    NoteList.appendChild(note_to_add);
 }
 
 function main(){
-    let ThemeToggle = document.getElementById("Theme");
+    const ThemeToggle = document.getElementById("Theme");
     ThemeToggle.addEventListener("click",switch_theme);
-    let Cancel = document.getElementById("Cancel");
-    Cancel.addEventListener("click",hide_buttons)
-    let NewNote = document.getElementById("NewNote");
-    NewNote.addEventListener("click",show_buttons)
+    const Cancel = document.getElementById("Cancel");
+    Cancel.addEventListener("click",hide_buttons);
+    const NewNote = document.getElementById("NewNote");
+    NewNote.addEventListener("click",show_buttons);
+    const Save = document.getElementById("Save");
+    Save.addEventListener("click",save_text)
+    const NoteList = document.getElementById("NoteList")
+
+    notesArray = [{title:'note one',body:'some text1'},
+                  {title:'note two',body:'some text2'}];
+
 }
 
 main()
