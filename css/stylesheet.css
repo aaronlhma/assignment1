@@ -10,6 +10,7 @@ body {
 }
 body.Light{
     color:black;
+    background-color:lightgray
 }
 body.Dark{
     color:lightgray;
